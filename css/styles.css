@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* Aquí definimos las Custom properties */
+:root {
+  --negro: #393939;
+  --blanco: #ececec;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+  --borde-negro: #00000050;
+  --marcado: rgb(127, 195, 255);
+  --tipo-principal: Helvetica, Arial, sans-serif;
+}
+
+.Body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  background-color: var(--blanco);
+  color: var(--negro);
+  line-height: 1.4em;
+  display: flex;
+  justify-content: center;
+}
+
+.Acordeon {
+  width: 90%;
+  max-width: 20rem;
+  padding: 2rem;
+  color: var(--negro);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+  background-color: var(--blanco);
+  -webkit-box-shadow: 0.4rem 0.4rem 0.8rem var(--sombra-ppal), -0.4rem -0.4rem 0.8rem var(--sombra-sec),
+    inset 0 0 0 transparent, inset 0 0 0 transparent;
+  box-shadow: 0.4rem 0.4rem 0.8rem var(--sombra-ppal), -0.4rem -0.4rem 0.8rem var(--sombra-sec), inset 0 0 0 transparent,
+    inset 0 0 0 transparent;
+}
+
+.Acordeon-bloque {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  color: var(--negro);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+  background-color: var(--blanco);
+  -webkit-box-shadow: 0.4rem 0.4rem 0.8rem var(--sombra-ppal), -0.4rem -0.4rem 0.8rem var(--sombra-sec),
+    inset 0 0 0 transparent, inset 0 0 0 transparent;
+  box-shadow: 0.4rem 0.4rem 0.8rem var(--sombra-ppal), -0.4rem -0.4rem 0.8rem var(--sombra-sec), inset 0 0 0 transparent,
+    inset 0 0 0 transparent;
+}
+
+.Acordeon-titulo {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  color: var(--negro);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+  background-color: var(--blanco);
+  -webkit-box-shadow: 0.4rem 0.4rem 0.8rem var(--sombra-ppal), -0.4rem -0.4rem 0.8rem var(--sombra-sec),
+    inset 0 0 0 transparent, inset 0 0 0 transparent;
+  box-shadow: 0.4rem 0.4rem 0.8rem var(--sombra-ppal), -0.4rem -0.4rem 0.8rem var(--sombra-sec), inset 0 0 0 transparent,
+    inset 0 0 0 transparent;
+  cursor: pointer;
+}
+.Acordeon-titulo:hover {
+  color: var(--negro);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+  background-color: var(--blanco);
+  -webkit-box-shadow: 0 0 0 transparent, 0 0 0 transparent, inset 0.4rem 0.4rem 0.8rem var(--sombra-ppal),
+    inset -0.4rem -0.4rem 0.8rem var(--sombra-sec);
+  box-shadow: 0 0 0 transparent, 0 0 0 transparent, inset 0.4rem 0.4rem 0.8rem var(--sombra-ppal),
+    inset -0.4rem -0.4rem 0.8rem var(--sombra-sec);
+}
+
+.Acordeon-contenido {
+  height: 0;
+  padding: 0rem;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.Acordeon-bloque.isActive .Acordeon-contenido {
+  height: 4rem;
+}
